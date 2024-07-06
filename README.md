@@ -22,4 +22,7 @@ MERN stack eCommerce web-based app for my ALX Software Engineering (Full Stack/ 
 <br></br>
 
 # Repo/ Project Contents
-(will edit later)
+## Web Infrastructure Diagram
+This is a draft as development and research continues
+
+<img src="NeXtro-Draw-IO.PNG">
