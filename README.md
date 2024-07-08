@@ -26,3 +26,9 @@ MERN stack eCommerce web-based app for my ALX Software Engineering (Full Stack/ 
 This is a draft as development and research continues
 
 <img src="NeXtro-Draw-IO.PNG">
+
+<br></br>
+
+# Research References Used
+## API Development
+- https://github.com/APIDevTools/swagger-express-middleware/issues/161#issue-553305427
