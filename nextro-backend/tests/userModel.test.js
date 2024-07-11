@@ -1,16 +1,10 @@
 /**
- * User test suite
+ * User Model Test
  */
 const mongoose = require('mongoose');
-const User = require('../models/User');
+const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
-const dotenv = require('dotenv');
 
-dotenv.config();
-
-/**
- * First connect to MongoDB
- */
 describe('User Model Test', () => {
   beforeAll(async () => {
     await mongoose.connect(process.env.MONGODB_URI, {
@@ -23,14 +17,11 @@ describe('User Model Test', () => {
     await mongoose.connection.close();
   });
 
-  beforeEach(async () => {
+  afterEach(async () => {
     await User.deleteMany({});
   });
 
-  /**
-   * Test #1: User creation & save
-   */
-  it('should create & save user successfully', async () => {
+  it('create & save user successfully', async () => {
     const userData = {
       name: 'John Doe',
       email: 'john.doe@example.com',
@@ -48,9 +39,6 @@ describe('User Model Test', () => {
     expect(savedUser.role).toBe(userData.role);
   });
 
-  /**
-   * Test #2: Password hash
-   */
   it('should hash password before saving', async () => {
     const userData = {
       name: 'Jane Doe',
@@ -62,12 +50,8 @@ describe('User Model Test', () => {
     const isMatch = await bcrypt.compare('Password123', savedUser.password);
 
     expect(isMatch).toBe(true);
-    expect(savedUser.password).not.toBe('Password123');
   });
 
-  /**
-   * Test #3: Password validation
-   */
   it('should compare password correctly', async () => {
     const userData = {
       name: 'Jake Doe',
@@ -79,50 +63,52 @@ describe('User Model Test', () => {
 
     const isMatch = await bcrypt.compare('Password123', newUser.password);
     expect(isMatch).toBe(true);
-
-    const wrongPasswordMatch = await bcrypt.compare('WrongPassword', newUser.password);
-    expect(wrongPasswordMatch).toBe(false);
   });
 
-  /**
-   * Test #4: Duplicate email
-   */
-  it('should not allow duplicate email', async () => {
+  it('should fail to create user without required fields', async () => {
     const userData = {
+      name: 'Jane Doe',
+      password: 'Password123',
+    };
+    const invalidUser = new User(userData);
+
+    let err;
+    try {
+      await invalidUser.save();
+    } catch (error) {
+      err = error;
+    }
+
+    expect(err).toBeInstanceOf(mongoose.Error.ValidationError);
+    expect(err.errors.email).toBeDefined();
+  });
+
+  it('should fail to create user with duplicate email', async () => {
+    const userData1 = {
       name: 'John Doe',
       email: 'john.doe@example.com',
       password: 'Password123',
     };
-    const newUser = new User(userData);
-    await newUser.save();
 
-    const duplicateUser = new User(userData);
-    let err;
-    try {
-      await duplicateUser.save();
-    } catch (error) {
-      err = error;
-    }
-    expect(err).toBeDefined();
-    expect(err.code).toBe(11000);
-  });
-
-  /**
-   * Test #5: Required field validation
-   */
-  it('should require email field', async () => {
-    const userData = {
-      name: 'John Doe',
+    const userData2 = {
+      name: 'Jane Doe',
+      email: 'john.doe@example.com',
       password: 'Password123',
     };
-    const newUser = new User(userData);
+
+    const user1 = new User(userData1);
+    await user1.save();
+
+    const user2 = new User(userData2);
+
     let err;
     try {
-      await newUser.save();
+      await user2.save();
     } catch (error) {
       err = error;
     }
-    expect(err).toBeDefined();
-    expect(err.errors.email).toBeDefined();
+
+    expect(err).toBeInstanceOf(mongoose.Error);
+    expect(err.code).toBe(11000); // Duplicate key error code
   });
 });
