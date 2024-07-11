@@ -1,3 +1,6 @@
+/**
+ * Connects NeXtro to PayPal
+ */
 const paypal = require('@paypal/checkout-server-sdk');
 
 const environment = process.env.PAYPAL_MODE === 'live' 
