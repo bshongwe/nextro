@@ -1,126 +1,130 @@
-# 🧪 NeXtro API Tests
+# NeXtro Backend Tests 🛠️
+This directory contains a suite of tests for the NeXtro backend, ensuring the robustness and reliability of the application's core functionalities. The tests cover user model operations, authentication processes, and payment handling.
+<br></br>
 
-This directory contains the test suite for `NeXtro`'s Backend. The tests are
-designed to ensure that all the functionalities of the API work as expected.
-The tests are written using Jest and Supertest.
+## Test Suites 📋
+### User Model Tests 🧑‍💻
 
-## 🗂️ Test Files
+**File:** `tests/userModel.test.js`
 
-### 🔑 `auth.test.js`
+- **Test 1:** Create & save user successfully.
+- **Test 2:** Hash password before saving.
+- **Test 3:** Compare password correctly.
+- **Test 4:** Fail to create user without required fields.
+- **Test 5:** Fail to create user with duplicate email.
+<br></br>
 
-This file contains tests for the authentication endpoints. It tests the
-following functionalities:
-- ✅ User registration
-- ✅ User login
-- ❌ Login with incorrect credentials
-- 🆔 Fetching authenticated user profile
+### Authentication Controller Tests 🔒
 
-### 📦 `product.test.js`
+**File:** `tests/authController.test.js`
 
-This file contains tests for the product-related endpoints. It tests the
-following functionalities:
-- 🛍️ Fetching all products
-- ➕ Creating a new product
-- 🔍 Fetching a single product by ID
-- ✏️ Updating a product by ID
-- 🗑️ Deleting a product by ID
+- **Test 1:** Sign in user successfully.
+- **Test 2:** Handle incorrect password.
+- **Test 3:** Log out user successfully.
+<br></br>
 
-### 👥 `user.test.js`
+### Payment Controller Tests 💳
 
-This file contains tests for the user-related endpoints. It tests the following
-functionalities:
-- 👨‍👩‍👧‍👦 Fetching all users (admin only)
-- 🆔 Fetching a user by ID (admin only)
-- 🗑️ Deleting a user by ID (admin only)
+**File:** `tests/paymentController.test.js`
 
-### 💳 `stripe.test.js`
+- **Test 1:** Create a payment session successfully.
+- **Test 2:** Handle payment creation error gracefully.
+<br></br>
 
-This file contains tests for the Stripe payment endpoints. It tests the
-following functionalities:
-- 💰 Creating a Stripe payment intent
-- 📬 Handling Stripe webhook events
+### User Sign-Up Controller Tests 📝
 
-### 💸 `paypal.test.js`
+**File:** `tests/userSignUpController.test.js`
 
-This file contains tests for the PayPal payment endpoints. It tests the
-following functionalities:
-- 🛒 Creating a PayPal order
-- ✅ Capturing a PayPal order
+- **Test 1:** Create a user successfully.
+- **Test 2:** Return 400 if required fields are missing.
+- **Test 3:** Return 409 if user already exists.
+- **Test 4:** Handle server errors gracefully.
+<br></br>
 
-### 🌍 `flutterwave.test.js`
-
-This file contains tests for the Flutterwave payment endpoints. It tests the
-following functionalities:
-- 💵 Creating a Flutterwave payment
-- 🔍 Verifying a Flutterwave payment
-
-## 🚀 Running the Tests
-
+## Running the Tests ▶️
 To run the tests, follow these steps:
 
-1. **Install Dependencies**
-
-   Ensure all dependencies are installed by running the installation script:
-
-   ```sh
-   ./install-dependencies.sh
+1. **Install dependencies:**
+   ```bash
+   npm install
    ```
 
-2. **Setup Environment Variables**
-
-   Make sure your `.env` file is correctly configured with all the required
-   environment variables:
-
+2. **Create a `.env` file in the root directory with the following variables:**
    ```env
-   MONGODB_URI=mongodb+srv://<user-details_+_cluster_details>
-   TOKEN_SECRET_KEY="<secret_key>"
-   FRONTEND_URL=http://localhost:3000
-   STRIPE_SECRET_KEY=<secret_key>
-   STRIPE_ENDPOINT_WEBHOOK_SECRET_KEY="<secret_key>"
-   PAYPAL_CLIENT_ID=<paypal_client_id>
-   PAYPAL_SECRET_KEY=<paypal_secret_key>
-   PAYPAL_MODE=sandbox
-   FLUTTERWAVE_SECRET_KEY=<flutterwave_secret_key>
+   MONGODB_URI = mongodb+srv://<user-details_+_cluster_details>
+   TOKEN_SECRET_KEY = "<secret_key>"
+   FRONTEND_URL = http://localhost:3000
+   STRIPE_SECRET_KEY = <secret_key>
+   STRIPE_ENPOINT_WEBHOOK_SECRET_KEY = "<secret_key>"
+   PAYPAL_CLIENT_ID = <paypal_client_id>
+   PAYPAL_CLIENT_SECRET = <paypal_client_secret>
+   FLUTTERWAVE_SECRET_KEY = <flutterwave_secret_key>
    ```
 
-3. **Run the Tests**
-
-   Use the following command to run the tests:
-
-   ```sh
+3. **Run the tests:**
+   ```bash
    npm test
    ```
+<br></br>
 
-   This will execute all test files in the `tests` directory.
+## Test Details 📜
+### User Model Tests 🧑‍💻
 
-## ⚙️ Additional Configuration
+- **Create & Save User:**
+  Verifies that a user is created and saved successfully with all required fields.
 
-### `jest.config.js`
+- **Password Hashing:**
+  Ensures that the password is hashed before saving the user.
 
-The Jest configuration file. It includes settings for the test environment and
-setup files.
+- **Password Comparison:**
+  Tests the password comparison function to validate correct password handling.
 
-### `jest.setup.js`
+- **Validation Errors:**
+  Checks for validation errors when required fields are missing.
 
-The Jest setup file. It increases the default timeout for tests to 30 seconds
-to accommodate asynchronous operations.
+- **Duplicate Email:**
+  Ensures that duplicate emails cannot be used to create new users.
+<br></br>
 
-## 🔔 Notes
+### Authentication Controller Tests 🔒
 
-- Ensure your MongoDB instance is running and accessible via the URI specified
-in the `.env` file.
-- The tests will create and delete data in your database. It's recommended to
-use a test database for running these tests.
-- The payment tests (Stripe, PayPal, Flutterwave) require valid credentials and
-might perform actual transactions in test modes.
+- **Sign In:**
+  Validates that a user can sign in successfully with correct credentials.
+
+- **Incorrect Password:**
+  Ensures appropriate handling when an incorrect password is provided.
+
+- **Log Out:**
+  Confirms that a user can log out successfully.
+<br></br>
+
+### Payment Controller Tests 💳
+
+- **Create Payment Session:**
+  Validates successful creation of a payment session using Stripe.
+
+- **Payment Error Handling:**
+  Ensures graceful error handling when a payment creation error occurs.
+<br></br>
+
+### User Sign-Up Controller Tests 📝
+
+- **Create User:**
+  Confirms successful creation of a user with valid input data.
+
+- **Missing Fields:**
+  Checks for appropriate error handling when required fields are missing.
+
+- **Duplicate User:**
+  Ensures that attempting to create a user with an existing email returns a conflict error.
+
+- **Server Error Handling:**
+  Validates graceful handling of internal server errors.
+<br></br>
+
+## Contributing 🤝
+We welcome contributions to improve our tests and ensure the reliability of NeXtro. If you find any issues or have suggestions for new tests, please open a pull request or issue.
 
 ---
 
-For any issues or questions regarding the tests, please refer to the main
-project's documentation or contact me:
-- [Yahoo](shongwe.bhekizwe@gmail.com)
-- [GitHub](https://www.github.com/bshongwe)
-- [Facebook](https://www.facebook.com/shongwe.bhekizwe)
-- [Twitter](https://www.twitter.com/ernest_bshong)
-- [LinkedIn](https://www.linkedin.com/in/ernest-shongwe)
-- [Portfolio](https://personal-portfolio-2024-green.vercel.app/)
+Happy Coding!
