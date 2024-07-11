@@ -4,6 +4,9 @@
 const mongoose = require('mongoose');
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 /**
  * First connect to MongoDB
@@ -20,10 +23,14 @@ describe('User Model Test', () => {
     await mongoose.connection.close();
   });
 
+  beforeEach(async () => {
+    await User.deleteMany({});
+  });
+
   /**
    * Test #1: User creation & save
    */
-  it('create & save user successfully', async () => {
+  it('should create & save user successfully', async () => {
     const userData = {
       name: 'John Doe',
       email: 'john.doe@example.com',
@@ -55,6 +62,7 @@ describe('User Model Test', () => {
     const isMatch = await bcrypt.compare('Password123', savedUser.password);
 
     expect(isMatch).toBe(true);
+    expect(savedUser.password).not.toBe('Password123');
   });
 
   /**
@@ -69,7 +77,52 @@ describe('User Model Test', () => {
     const newUser = new User(userData);
     await newUser.save();
 
-    const isMatch = await newUser.comparePassword('Password123');
+    const isMatch = await bcrypt.compare('Password123', newUser.password);
     expect(isMatch).toBe(true);
+
+    const wrongPasswordMatch = await bcrypt.compare('WrongPassword', newUser.password);
+    expect(wrongPasswordMatch).toBe(false);
+  });
+
+  /**
+   * Test #4: Duplicate email
+   */
+  it('should not allow duplicate email', async () => {
+    const userData = {
+      name: 'John Doe',
+      email: 'john.doe@example.com',
+      password: 'Password123',
+    };
+    const newUser = new User(userData);
+    await newUser.save();
+
+    const duplicateUser = new User(userData);
+    let err;
+    try {
+      await duplicateUser.save();
+    } catch (error) {
+      err = error;
+    }
+    expect(err).toBeDefined();
+    expect(err.code).toBe(11000);
+  });
+
+  /**
+   * Test #5: Required field validation
+   */
+  it('should require email field', async () => {
+    const userData = {
+      name: 'John Doe',
+      password: 'Password123',
+    };
+    const newUser = new User(userData);
+    let err;
+    try {
+      await newUser.save();
+    } catch (error) {
+      err = error;
+    }
+    expect(err).toBeDefined();
+    expect(err.errors.email).toBeDefined();
   });
 });
