@@ -1,6 +1,6 @@
 {
     "version" : 2,
-    "name" : "NeXtro eCommerce",
+    "name" : "nextro-backend",
     "builds" : [
         {
             "src" : "./index.js",
