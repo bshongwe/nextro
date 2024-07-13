@@ -26,8 +26,7 @@
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^5.0.0",
     "nodemon": "^3.0.3",
-    "stripe": "^15.8.0",
-    "@paypal/checkout-server-sdk": "^1.0.2"
+    "stripe": "^15.8.0"
   },
   "devDependencies": {
     "jest": "^29.0.3",
