@@ -9,7 +9,7 @@ const options = {
     info: {
       title: 'NeXtro API',
       version: '1.0.0',
-      description: 'SWagger API documentation for the NeXtro eCommerce platform',
+      description: 'Swagger API documentation for the NeXtro eCommerce platform',
       termsOfService: '<http://example.com/terms/>',
       contact: {
         name: 'Ernest Bhekizwe Shongwe',
