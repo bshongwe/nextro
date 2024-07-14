@@ -1,5 +1,3 @@
-// Routes for clientside API to integrate
-// with backend
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 import Home from '../pages/Home'
