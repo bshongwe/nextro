@@ -9,6 +9,8 @@ import SummaryApi from './common';
 import { setUserDetails } from './store/userSlice';
 import './App.css';
 import logo from './logo.svg';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const dispatch = useDispatch()
