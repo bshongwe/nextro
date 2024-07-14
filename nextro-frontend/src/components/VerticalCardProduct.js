@@ -30,7 +30,7 @@ const VerticalCard = ({loading,data = []}) => {
                              <div className='flex gap-3'>
                                  <p className='text-red-600 font-medium p-1 animate-pulse rounded-full bg-slate-200 w-full  py-2'></p>
                                  <p className='text-slate-500 line-through p-1 animate-pulse rounded-full bg-slate-200 w-full  py-2'></p>
-[O                             </div>
+                             </div>
                              <button className='text-sm  text-white px-3  rounded-full bg-slate-200  py-2 animate-pulse'></button>
                          </div>
                      </div>
