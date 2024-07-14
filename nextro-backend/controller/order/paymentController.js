@@ -1,6 +1,3 @@
-/**
- * Payment controller
- */
 const stripe = require('../../config/stripe')
 const userModel = require('../../models/userModel')
 

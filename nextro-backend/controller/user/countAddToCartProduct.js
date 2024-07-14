@@ -1,6 +1,3 @@
-/**
- * CRUD - counts products in cart
- */
 const addToCartModel = require("../../models/cartProduct")
 
 const countAddToCartProduct = async(req,res)=>{

@@ -1,6 +1,3 @@
-/**
- * Order controller
- */
 const orderModel = require("../../models/orderProductModel")
 
 const orderController = async(request,response)=>{

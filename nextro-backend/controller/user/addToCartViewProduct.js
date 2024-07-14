@@ -1,6 +1,3 @@
-/**
- * CRUD - Add to cart view
- */
 const addToCartModel = require("../../models/cartProduct")
 
 const addToCartViewProduct = async(req,res)=>{

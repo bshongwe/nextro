@@ -1,6 +1,3 @@
-/**
- * All users controller
- */
 const userModel = require("../../models/userModel")
 
 async function allUsers(req,res){
@@ -8,7 +5,7 @@ async function allUsers(req,res){
         console.log("userid all Users",req.userId)
 
         const allUsers = await userModel.find()
-
+        
         res.json({
             message : "All User ",
             data : allUsers,

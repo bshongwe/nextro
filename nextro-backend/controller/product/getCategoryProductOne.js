@@ -1,6 +1,3 @@
-/**
- * Get product by category
- */
 const productModel = require("../../models/productModel")
 
 
@@ -10,7 +7,7 @@ const getCategoryProduct = async(req,res)=>{
 
         console.log("category",productCategory)
 
-        //array to store one product from each category
+        // Array stores 1 product from each category
         const productByCategory = []
 
         for(const category of productCategory){

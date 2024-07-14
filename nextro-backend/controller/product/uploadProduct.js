@@ -1,6 +1,3 @@
-/**
- * Upload product
- */
 const uploadProductPermission = require("../../helpers/permission")
 const productModel = require("../../models/productModel")
 

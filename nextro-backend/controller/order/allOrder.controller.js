@@ -1,6 +1,3 @@
-/**
- * Controls all product orders
- */
 const orderModel = require("../../models/orderProductModel")
 const userModel = require("../../models/userModel")
 

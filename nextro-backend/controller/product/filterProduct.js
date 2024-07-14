@@ -1,6 +1,3 @@
-/**
- * Filter product
- */
 const productModel = require("../../models/productModel")
 
 const filterProductController = async(req,res)=>{

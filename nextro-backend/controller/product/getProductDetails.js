@@ -1,6 +1,3 @@
-/**
- * Product details get func
- */
 const productModel = require("../../models/productModel")
 
 const getProductDetails = async(req,res)=>{

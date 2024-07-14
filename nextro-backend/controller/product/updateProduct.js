@@ -1,6 +1,3 @@
-/**
- * CRUD permissions: product update
- */
 const uploadProductPermission = require('../../helpers/permission')
 const productModel = require('../../models/productModel')
 

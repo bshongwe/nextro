@@ -1,6 +1,3 @@
-/**
- * User permissions
- */
 const userModel = require("../models/userModel")
 
 const uploadProductPermission = async(userId) => {

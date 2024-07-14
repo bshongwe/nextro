@@ -1,6 +1,3 @@
-/**
- * MongoDB configuration
- */
 const mongoose = require("mongoose")
 
    

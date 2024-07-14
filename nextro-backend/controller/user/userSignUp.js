@@ -1,6 +1,3 @@
-/**
- * User sign-up
- */
 const userModel = require("../../models/userModel")
 const bcrypt = require('bcryptjs');
 

@@ -1,6 +1,3 @@
-/**
- * CRUD for user: Update user
- */
 const userModel = require("../../models/userModel")
 
 async function updateUser(req,res){
@@ -20,8 +17,10 @@ async function updateUser(req,res){
         console.log("user.role",user.role)
 
 
+
         const updateUser = await userModel.findByIdAndUpdate(userId,payload)
 
+        
         res.json({
             data : updateUser,
             message : "User Updated",
@@ -36,5 +35,6 @@ async function updateUser(req,res){
         })
     }
 }
+
 
 module.exports = updateUser

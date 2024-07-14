@@ -1,6 +1,3 @@
-/**
- * Add to cart controller
- */
 const addToCartModel = require("../../models/cartProduct")
 
 const addToCartController = async(req,res)=>{
@@ -36,7 +33,7 @@ const addToCartController = async(req,res)=>{
             success : true,
             error : false
         })
-
+        
 
     }catch(err){
         res.json({

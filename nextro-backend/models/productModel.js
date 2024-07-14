@@ -1,6 +1,3 @@
-/**
- * Product model
- */
 const mongoose = require('mongoose')
 
 const productSchema = mongoose.Schema({

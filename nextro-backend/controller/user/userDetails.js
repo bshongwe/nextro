@@ -1,6 +1,3 @@
-/**
- * User details
- */
 const userModel = require("../../models/userModel")
 
 async function userDetailsController(req,res){

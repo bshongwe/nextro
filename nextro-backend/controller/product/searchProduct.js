@@ -1,6 +1,3 @@
-/**
- * Search for product func
- */
 const productModel = require("../../models/productModel")
 
 const searchProduct = async(req,res)=>{

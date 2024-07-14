@@ -1,6 +1,3 @@
-/**
- * Payment webhook: Stripe
- */
 const stripe = require('../../config/stripe')
 const orderModel = require('../../models/orderProductModel')
 const addToCartModel = require('../../models/cartProduct')
@@ -44,13 +41,13 @@ const webhooks = async(request,response) => {
 
     try {
         event = stripe.webhooks.constructEvent(payloadString, header, endpointSecret);
-[O    } catch (err) {
+    } catch (err) {
         response.status(400).send(`Webhook Error: ${err.message}`);
         return;
     }
 
 
-    // Handle the event
+    // Handle Stripe events
   switch (event.type) {
     case 'checkout.session.completed':
       const session = event.data.object;
@@ -69,7 +66,7 @@ const webhooks = async(request,response) => {
             payment_status : session.payment_status,
         },
         shipping_options : session.shipping_options.map(s => {
-            return{
+            return{  
                 ...s,
                 shipping_amount : s.shipping_amount / 100
             }
@@ -85,7 +82,7 @@ const webhooks = async(request,response) => {
     }
     break;
 
-    // ... handle other event types
+    // Will add other event types
     default:
       console.log(`Unhandled event type ${event.type}`);
   }

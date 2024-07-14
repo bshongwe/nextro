@@ -1,6 +1,3 @@
-/**
- * Get products by specific category
- */
 const productModel = require("../../models/productModel")
 
 const getCategoryWiseProduct = async(req,res)=>{

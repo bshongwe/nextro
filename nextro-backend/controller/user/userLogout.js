@@ -1,6 +1,3 @@
-/**
- * User signout
- */
 async function userLogout(req,res){
     try{
         const tokenOption = {
@@ -25,5 +22,6 @@ async function userLogout(req,res){
         })
     }
 }
+
 
 module.exports = userLogout

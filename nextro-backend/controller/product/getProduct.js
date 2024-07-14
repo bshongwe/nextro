@@ -1,6 +1,3 @@
-/**
- * Get product
- */
 const productModel = require("../../models/productModel")
 
 const getProductController = async(req,res)=>{
