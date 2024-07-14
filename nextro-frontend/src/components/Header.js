@@ -23,7 +23,7 @@ const Header = () => {
   const [search,setSearch] = useState(searchQuery)
 
   const handleLogout = async() => {
-[O    const fetchData = await fetch(SummaryApi.logout_user.url,{
+    const fetchData = await fetch(SummaryApi.logout_user.url,{
       method : SummaryApi.logout_user.method,
       credentials : 'include'
     })
