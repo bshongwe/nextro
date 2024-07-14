@@ -21,7 +21,7 @@ const AdminProductCard = ({
 
                 <p className='font-semibold'>
                   {
-                    displayINRCurrency(data.sellingPrice)
+                    displayZARCurrency(data.sellingPrice)
                   }
         
                 </p>
