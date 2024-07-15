@@ -25,54 +25,62 @@ MERN stack eCommerce web-based app for my ALX Software Engineering (Full Stack/ 
 ## Web Infrastructure Diagram
 <img src="NeXtro-Draw-IO.PNG">
 <br></br>
+
 ## Developement Servers
 To run the project's servers, first run the backend server, thereater, the frontend server:
 - `backend`: use the following command at the root of <b>nextro-backend</b>
-```
+
+```bash
 npm run dev
 ```
 <br></br>
 - `frontend`: use the following command at the root of <b>nextro-frontend</b>
-```
+
+```bash
 npm start
 ```
 <br></br>
+
 ## API Routes
+
 ### For the frontend
+
 sign up:
 - `/api/product-details` (post)
-
+<br></br>
 addToCartProduct:
 - `/api/addtocart` (post)
-
+<br></br>
 addToCartProductCount:
 - `/api/countAddToCartProduct` (get)
-
+<br></br>
 addToCartProductView:
 - `/api/view-card-product` (get)
-
+<br></br>
 updateCartProduct:
 - `/api/update-cart-product` (post)
-
+<br></br>
 deleteCartProduct:
 - `/api/delete-cart-product` (post)
-
+<br></br>
 searchProduct:
 - `/api/search` (get)
-
+<br></br>
 filterProduct:
 - `/api/filter-product` (post)
-
+<br></br>
 payment:
 - `/api/checkout` (post)
-
+<br></br>
 getOrder:
 - `/api/order-list` (get)
-
+<br></br>
 allOrder:
 - `/api/all-order`
 <br></br>
+
 ### For the backend
+
 #### For users
 - `router.post"/signup"`
 - `router.post"/signin"`
