@@ -79,6 +79,7 @@ npm start
 | Backend     | 🔐 Users             | `router.get"/userLogout"`     | GET        | Log out users                                 | 200, 400, 401, 500       |
 | Backend     | 🛠️ Admin Panel       | `router.get"/all-user"`       | GET        | Get all users                                 | 200, 400, 401, 500       |
 | Backend     | 🛠️ Admin Panel       | `router.post"/update-user"`   | POST       | Update user details                           | 200, 400, 401, 409, 500  |
+
 <br></br>
 
 # Research References Used
