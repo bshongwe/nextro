@@ -23,7 +23,7 @@ MERN stack eCommerce web-based app for my ALX Software Engineering (Full Stack/ 
 
 # Repo/ Project Contents
 ## Web Infrastructure Diagram
-This is a draft as development and research continues
+<img src="NeXtro-Draw-IO.PNG">
 <br></br>
 ## Developement Servers
 To run the project's servers, first run the backend server, thereater, the frontend server:
@@ -84,9 +84,6 @@ npm start
 - `router.post'/webhook'`
 - `router.get"/order-list"`
 - `router.get"/all-order"`
-<br></br>
-<img src="NeXtro-Draw-IO.PNG">
-
 <br></br>
 
 # Research References Used
