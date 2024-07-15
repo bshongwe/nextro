@@ -43,76 +43,42 @@ npm start
 
 ## API Routes
 
-### For the frontend
-
-sign up:
-- `/api/product-details` (post)
-<br></br>
-addToCartProduct:
-- `/api/addtocart` (post)
-<br></br>
-addToCartProductCount:
-- `/api/countAddToCartProduct` (get)
-<br></br>
-addToCartProductView:
-- `/api/view-card-product` (get)
-<br></br>
-updateCartProduct:
-- `/api/update-cart-product` (post)
-<br></br>
-deleteCartProduct:
-- `/api/delete-cart-product` (post)
-<br></br>
-searchProduct:
-- `/api/search` (get)
-<br></br>
-filterProduct:
-- `/api/filter-product` (post)
-<br></br>
-payment:
-- `/api/checkout` (post)
-<br></br>
-getOrder:
-- `/api/order-list` (get)
-<br></br>
-allOrder:
-- `/api/all-order`
-<br></br>
-
-### For the backend
-
-#### For users
-- `router.post"/signup"`
-- `router.post"/signin"`
-- `router.get"/user-details"`
-- `router.get"/userLogout"`
-
-#### Admin panel 
-- `router.get"/all-user"`
-- `router.post"/update-user"`
-
-#### Product
-- `router.post"/upload-product"`
-- `router.get"/get-product"`
-- `router.post"/update-product"`
-- `router.get"/get-categoryProduct"`
-- `router.post"/category-product"`
-- `router.post"/product-details"`
-- `router.get"/search"`
-- `router.post"/filter-product"`
-
-#### User add to cart
-- `- router.post"/addtocart"`
-- `router.get"/countAddToCartProduct"`
-- `router.get"/view-card-product"`
-- `router.post"/update-cart-product"`
-- `router.post"/delete-cart-product"`
-
-#### Payment and order
-- `router.post'/checkout'`
-- `router.post'/webhook'`
-- `router.get"/order-list"`
-- `router.get"/all-order"`
+| **Type**    | **Main Group**      | **Endpoint**                  | **Method** | **Description**                               | **Status Responses**     |
+|-------------|---------------------|-------------------------------|------------|-----------------------------------------------|--------------------------|
+| Frontend    | 🛍️ Product Details  | `/api/product-details`        | POST       | For signing up users                          | 200, 400, 409, 500       |
+| Backend     | 🛍️ Products         | `router.post"/upload-product"`| POST       | Upload product                                | 200, 400, 500            |
+| Backend     | 🛍️ Products         | `router.get"/get-product"`    | GET        | Get product details                           | 200, 400, 500            |
+| Backend     | 🛍️ Products         | `router.post"/update-product"`| POST       | Update product                                | 200, 400, 409, 500       |
+| Backend     | 🛍️ Products         | `router.get"/get-categoryProduct"` | GET   | Get products by category                      | 200, 400, 500            |
+| Backend     | 🛍️ Products         | `router.post"/category-product"` | POST   | Get products by category                      | 200, 400, 500            |
+| Backend     | 🛍️ Products         | `router.post"/product-details"` | POST    | Get product details                           | 200, 400, 500            |
+| Backend     | 🛍️ Products         | `router.get"/search"`         | GET        | Search for a product                          | 200, 400, 500            |
+| Backend     | 🛍️ Products         | `router.post"/filter-product"`| POST       | Filter products                               | 200, 400, 500            |
+| Frontend    | 🛒 Cart              | `/api/addtocart`              | POST       | Add product to cart                           | 200, 400, 409, 500       |
+| Frontend    | 🛒 Cart              | `/api/countAddToCartProduct`  | GET        | Get the count of products in the cart         | 200, 400, 500            |
+| Frontend    | 🛒 Cart              | `/api/view-card-product`      | GET        | View products in the cart                     | 200, 400, 500            |
+| Frontend    | 🛒 Cart              | `/api/update-cart-product`    | POST       | Update product in the cart                    | 200, 400, 409, 500       |
+| Frontend    | 🛒 Cart              | `/api/delete-cart-product`    | POST       | Delete product from the cart                  | 200, 400, 409, 500       |
+| Backend     | 🛒 Cart              | `router.post"/addtocart"`     | POST       | Add product to cart                           | 200, 400, 409, 500       |
+| Backend     | 🛒 Cart              | `router.get"/countAddToCartProduct"` | GET | Get count of products in cart                 | 200, 400, 500            |
+| Backend     | 🛒 Cart              | `router.get"/view-card-product"` | GET   | View products in cart                         | 200, 400, 500            |
+| Backend     | 🛒 Cart              | `router.post"/update-cart-product"` | POST | Update product in cart                        | 200, 400, 409, 500       |
+| Backend     | 🛒 Cart              | `router.post"/delete-cart-product"` | POST | Delete product from cart                      | 200, 400, 409, 500       |
+| Frontend    | 🔍 Product Search    | `/api/search`                 | GET        | Search for a product                          | 200, 400, 500            |
+| Frontend    | 🗂️ Product Filter    | `/api/filter-product`         | POST       | Filter products                               | 200, 400, 500            |
+| Frontend    | 💳 Payment           | `/api/checkout`               | POST       | Payment processing                            | 200, 400, 500            |
+| Backend     | 💳 Payment and Order | `router.post'/checkout'`      | POST       | Checkout                                      | 200, 400, 500            |
+| Backend     | 💳 Payment and Order | `router.post'/webhook'`       | POST       | Payment webhook                               | 200, 400, 500            |
+| Frontend    | 📦 Order             | `/api/order-list`             | GET        | Get user order list                           | 200, 400, 500            |
+| Frontend    | 📦 Order             | `/api/all-order`              | GET        | Get all orders                                | 200, 400, 500            |
+| Backend     | 💳 Payment and Order | `router.get"/order-list"`     | GET        | Get user order list                           | 200, 400, 500            |
+| Backend     | 💳 Payment and Order | `router.get"/all-order"`      | GET        | Get all orders                                | 200, 400, 500            |
+| Backend     | 🔐 Users             | `router.post"/signup"`        | POST       | Sign up users                                 | 200, 400, 409, 500       |
+| Backend     | 🔐 Users             | `router.post"/signin"`        | POST       | Sign in users                                 | 200, 400, 401, 500       |
+| Backend     | 🔐 Users             | `router.get"/user-details"`   | GET        | Get user details                              | 200, 400, 401, 500       |
+| Backend     | 🔐 Users             | `router.get"/userLogout"`     | GET        | Log out users                                 | 200, 400, 401, 500       |
+| Backend     | 🛠️ Admin Panel       | `router.get"/all-user"`       | GET        | Get all users                                 | 200, 400, 401, 500       |
+| Backend     | 🛠️ Admin Panel       | `router.post"/update-user"`   | POST       | Update user details                           | 200, 400, 401, 409, 500  |
 <br></br>
 
 # Research References Used
