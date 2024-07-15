@@ -1,17 +1,17 @@
 // Products in corousal
 import React, { useEffect, useState } from 'react'
-import image1 from '../assets/banner/img1.png'
-import image2 from '../assets/banner/img2.png'
-import image3 from '../assets/banner/img3.png'
-import image4 from '../assets/banner/img4.png'
-import image5 from '../assets/banner/img5.png'
+import image1 from '../assets/banner/nextro-img1.png'
+import image2 from '../assets/banner/nextro-img2.png'
+import image3 from '../assets/banner/nextro-img3.png'
+import image4 from '../assets/banner/nextro-img4.png'
+import image5 from '../assets/banner/nextro-img5.png'
 
 
-import image1Mobile from '../assets/banner/img1_mobile.png'
-import image2Mobile from '../assets/banner/img2_mobile.png'
-import image3Mobile from '../assets/banner/img3_mobile.png'
-import image4Mobile from '../assets/banner/img4_mobile.png'
-import image5Mobile from '../assets/banner/img5_mobile.png'
+import image1Mobile from '../assets/banner/nextro-img1_mobile.png'
+import image2Mobile from '../assets/banner/nextro-img2_mobile.png'
+import image3Mobile from '../assets/banner/nextro-img3_mobile.png'
+import image4Mobile from '../assets/banner/nextro-img4_mobile.png'
+import image5Mobile from '../assets/banner/nextro-img5_mobile.png'
 
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
