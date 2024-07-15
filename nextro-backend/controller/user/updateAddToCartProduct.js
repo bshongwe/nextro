@@ -12,7 +12,7 @@ const updateAddToCartProduct = async(req,res)=>{
         })
 
         res.json({
-            message : "Product Updated",
+            message : "Product updated",
             data : updateProduct,
             error : false,
             success : true

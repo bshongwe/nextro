@@ -8,7 +8,7 @@ const deleteAddToCartProduct = async(req,res)=>{
         const deleteProduct = await addToCartModel.deleteOne({ _id : addToCartProductId})
 
         res.json({
-            message : "Product Deleted From Cart",
+            message : "Product deleted from Cart",
             error : false,
             success : true,
             data : deleteProduct
