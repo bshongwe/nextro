@@ -39,17 +39,38 @@ npm start
 <br></br>
 ## API Routes
 ### For the frontend
-- sign up: `/api/product-details` (post)
-- addToCartProduct: `/api/addtocart` (post)
-- addToCartProductCount: `/api/countAddToCartProduct` (get)
-- addToCartProductView: `/api/view-card-product` (get)
-- updateCartProduct: `/api/update-cart-product` (post)
-- deleteCartProduct: `/api/delete-cart-product` (post)
-- searchProduct: `/api/search` (get)
-- filterProduct: `/api/filter-product` (post)
-- payment: `/api/checkout` (post)
-- getOrder: `/api/order-list` (get)
-- allOrder: `/api/all-order`
+sign up:
+- `/api/product-details` (post)
+
+addToCartProduct:
+- `/api/addtocart` (post)
+
+addToCartProductCount:
+- `/api/countAddToCartProduct` (get)
+
+addToCartProductView:
+- `/api/view-card-product` (get)
+
+updateCartProduct:
+- `/api/update-cart-product` (post)
+
+deleteCartProduct:
+- `/api/delete-cart-product` (post)
+
+searchProduct:
+- `/api/search` (get)
+
+filterProduct:
+- `/api/filter-product` (post)
+
+payment:
+- `/api/checkout` (post)
+
+getOrder:
+- `/api/order-list` (get)
+
+allOrder:
+- `/api/all-order`
 <br></br>
 ### For the backend
 #### For users
