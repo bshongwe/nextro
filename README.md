@@ -24,7 +24,67 @@ MERN stack eCommerce web-based app for my ALX Software Engineering (Full Stack/ 
 # Repo/ Project Contents
 ## Web Infrastructure Diagram
 This is a draft as development and research continues
+<br></br>
+## Developement Servers
+To run the project's servers, first run the backend server, thereater, the frontend server:
+- `backend`: use the following command at the root of <b>nextro-backend</b>
+```
+npm run dev
+```
+<br></br>
+- `frontend`: use the following command at the root of <b>nextro-frontend</b>
+```
+npm start
+```
+<br></br>
+## API Routes
+### For the frontend
+- sign up: `/api/product-details` (post)
+- addToCartProduct: `/api/addtocart` (post)
+- addToCartProductCount: `/api/countAddToCartProduct` (get)
+- addToCartProductView: `/api/view-card-product` (get)
+- updateCartProduct: `/api/update-cart-product` (post)
+- deleteCartProduct: `/api/delete-cart-product` (post)
+- searchProduct: `/api/search` (get)
+- filterProduct: `/api/filter-product` (post)
+- payment: `/api/checkout` (post)
+- getOrder: `/api/order-list` (get)
+- allOrder: `/api/all-order`
+<br></br>
+### For the backend
+#### For users
+- `router.post"/signup"`
+- `router.post"/signin"`
+- `router.get"/user-details"`
+- `router.get"/userLogout"`
 
+#### Admin panel 
+- `router.get"/all-user"`
+- `router.post"/update-user"`
+
+#### Product
+- `router.post"/upload-product"`
+- `router.get"/get-product"`
+- `router.post"/update-product"`
+- `router.get"/get-categoryProduct"`
+- `router.post"/category-product"`
+- `router.post"/product-details"`
+- `router.get"/search"`
+- `router.post"/filter-product"`
+
+#### User add to cart
+- `- router.post"/addtocart"`
+- `router.get"/countAddToCartProduct"`
+- `router.get"/view-card-product"`
+- `router.post"/update-cart-product"`
+- `router.post"/delete-cart-product"`
+
+#### Payment and order
+- `router.post'/checkout'`
+- `router.post'/webhook'`
+- `router.get"/order-list"`
+- `router.get"/all-order"`
+<br></br>
 <img src="NeXtro-Draw-IO.PNG">
 
 <br></br>
