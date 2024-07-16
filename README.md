@@ -112,13 +112,13 @@ npm start
  <br></br>
  
 # Research References Used
-## API Development
+## API Development References
 - https://github.com/APIDevTools/swagger-express-middleware/issues/161#issue-553305427
 - https://blog.postman.com/how-to-create-a-rest-api-with-node-js-and-express/
 - https://medium.com/@holasoymalva/how-to-make-your-first-rest-api-in-node-js-82c05fca9106
 <br></br>
 
-## Nextro Development
+## NeXtro Development References
 - [MongoDB](https://www.mongodb.com/)
 - [Express](https://expressjs.com/)
 - [React](https://react.dev/)
