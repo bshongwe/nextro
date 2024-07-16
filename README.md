@@ -94,18 +94,20 @@ npm start
 <br></br>
 
 # Technologies Used
-✔️ Frontend: React, React Router, Tailwind CSS
-✔️ Backend: Node.js, Express, MongoDB, Mongoose
-✔️ State Management: Redux Toolkit
-✔️ Authentication: JWT
-✔️ Payments: Stripe (implemented), Flutterwave and PayPal (in development)
-✔️ Deployment: Vercel (client-side), MongoDB Atlas (database), Cloudinary (product images)
+
+✔️ Frontend: React, React Router, Tailwind CSS</br>
+✔️ Backend: Node.js, Express, MongoDB, Mongoose</br>
+✔️ State Management: Redux Toolkit</br>
+✔️ Authentication: JWT</br>
+✔️ Payments: Stripe (implemented), Flutterwave and PayPal (in development)</br>
+✔️ Deployment: Vercel (client-side), MongoDB Atlas (database), Cloudinary (product images)</br>
 ✔️ CI/CD: GitHub Actions, GitLab CI/CD
 <br></br>
  
  # Further Development Plans
- ✔️ Further UI/UX enhancements
-✔️ Adding more features such as wish lists and product recommendations
+ 
+✔️ Further UI/UX enhancements</br>
+✔️ Adding more features such as wish lists and product recommendations</br>
 ✔️ Continuous performance and scalability improvements
  <br></br>
  
