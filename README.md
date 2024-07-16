@@ -93,6 +93,36 @@ npm start
 
 <br></br>
 
+# Technologies Used
+✔️ Frontend: React, React Router, Tailwind CSS
+✔️ Backend: Node.js, Express, MongoDB, Mongoose
+✔️ State Management: Redux Toolkit
+✔️ Authentication: JWT
+✔️ Payments: Stripe (implemented), Flutterwave and PayPal (in development)
+✔️ Deployment: Vercel (client-side), MongoDB Atlas (database), Cloudinary (product images)
+✔️ CI/CD: GitHub Actions, GitLab CI/CD
+<br></br>
+ 
+ # Further Development Plans
+ ✔️ Further UI/UX enhancements
+✔️ Adding more features such as wish lists and product recommendations
+✔️ Continuous performance and scalability improvements
+ <br></br>
+ 
 # Research References Used
 ## API Development
 - https://github.com/APIDevTools/swagger-express-middleware/issues/161#issue-553305427
+- https://blog.postman.com/how-to-create-a-rest-api-with-node-js-and-express/
+- https://medium.com/@holasoymalva/how-to-make-your-first-rest-api-in-node-js-82c05fca9106
+<br></br>
+
+## Nextro Development
+- [MongoDB](https://www.mongodb.com/)
+- [Express](https://expressjs.com/)
+- [React](https://react.dev/)
+- [Nodejs](https://nodejs.org/en)
+- [Redux-Toolkit](https://react-redux.js.org/introducti...)
+- [React Router](https://reactrouter.com/en/main/start...)
+- [Mongoose](https://mongoosejs.com/)
+- [JsonWebToken](https://www.npmjs.com/package/jsonweb...)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
