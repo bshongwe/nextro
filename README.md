@@ -1,6 +1,17 @@
-# 🛍️Webstack - Portfolio Project
+# 🛍️ NeXtro (Webstack - Portfolio Project)
 MERN stack eCommerce web-based app for my ALX Software Engineering (Full Stack/ Backend) certification
 <br></br>
+NeXtro is a full-stack eCommerce platform built with the MERN stack (MongoDB, Express, React, Node.js). The platform features user authentication, product browsing, cart management, order processing, and secure payments with Stripe and PayPal. The application supports both customer and administrator roles, allowing for comprehensive management of products, users, and orders.
+
+## Table of Contents
+- [Setup Dev Environment](#setup-dev-environment)
+- [App Development & User Stories](#app-development--user-stories)
+- [Project Presentation](#project-presentation)
+- [Repo/ Project Contents](#repo-project-contents)
+  - [Web Infrastructure Diagram](#web-infrastructure-diagram)
+  - [Development Servers](#development-servers)
+  - [API Routes](#api-routes)
+- [Research References Used](#research-references-used)
 
 ### SETUP DEV ENVIRONMENT:
 🛠️ Kanban, draw.io, GitHub & GitLab and deployment setup
@@ -82,6 +93,38 @@ npm start
 
 <br></br>
 
+# Technologies Used
+
+✔️ Frontend: React, React Router, Tailwind CSS</br>
+✔️ Backend: Node.js, Express, MongoDB, Mongoose</br>
+✔️ State Management: Redux Toolkit</br>
+✔️ Authentication: JWT</br>
+✔️ Payments: Stripe (implemented), Flutterwave and PayPal (in development)</br>
+✔️ Deployment: Vercel (client-side), MongoDB Atlas (database), Cloudinary (product images)</br>
+✔️ CI/CD: GitHub Actions, GitLab CI/CD
+<br></br>
+ 
+ # Further Development Plans
+ 
+✔️ Further UI/UX enhancements</br>
+✔️ Adding more features such as wish lists and product recommendations</br>
+✔️ Continuous performance and scalability improvements
+ <br></br>
+ 
 # Research References Used
-## API Development
+## API Development References
 - https://github.com/APIDevTools/swagger-express-middleware/issues/161#issue-553305427
+- https://blog.postman.com/how-to-create-a-rest-api-with-node-js-and-express/
+- https://medium.com/@holasoymalva/how-to-make-your-first-rest-api-in-node-js-82c05fca9106
+<br></br>
+
+## NeXtro Development References
+- [MongoDB](https://www.mongodb.com/)
+- [Express](https://expressjs.com/)
+- [React](https://react.dev/)
+- [Nodejs](https://nodejs.org/en)
+- [Redux-Toolkit](https://react-redux.js.org/introducti...)
+- [React Router](https://reactrouter.com/en/main/start...)
+- [Mongoose](https://mongoosejs.com/)
+- [JsonWebToken](https://www.npmjs.com/package/jsonweb...)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
