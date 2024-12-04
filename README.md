@@ -1,4 +1,10 @@
 # 🛍️ NeXtro (Webstack - Portfolio Project)
+![Visits Badge](https://badges.pufler.dev/visits/bshongwe/nextro)
+![GitHub Repo Stars](https://img.shields.io/github/stars/bshongwe/nextro)
+![GitHub Forks](https://img.shields.io/github/forks/bshongwe/nextro)
+![GitHub Issues](https://img.shields.io/github/issues/bshongwe/nextro)
+![GitHub License](https://img.shields.io/github/license/bshongwe/nextro)
+
 MERN stack eCommerce web-based app for my ALX Software Engineering (Full Stack/ Backend) certification
 <br></br>
 NeXtro is a full-stack eCommerce platform built with the MERN stack (MongoDB, Express, React, Node.js). The platform features user authentication, product browsing, cart management, order processing, and secure payments with Stripe and PayPal. The application supports both customer and administrator roles, allowing for comprehensive management of products, users, and orders.
