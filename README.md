@@ -1,5 +1,5 @@
 # 🛍️ NeXtro (Webstack - Portfolio Project)
-![Visits Badge](https://badges.pufler.dev/visits/bshongwe/nextro)
+![Visits Badge](https://hits.sh/github.com/bshongwe/nextro.svg?style=flat-square&label=Visits&color=blue)
 ![GitHub Repo Stars](https://img.shields.io/github/stars/bshongwe/nextro)
 ![GitHub Forks](https://img.shields.io/github/forks/bshongwe/nextro)
 ![GitHub Issues](https://img.shields.io/github/issues/bshongwe/nextro)
