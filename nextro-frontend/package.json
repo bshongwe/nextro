@@ -4,7 +4,7 @@
   "description": "MERN stack eCommerce web-based app for my ALX Software Engineering (Full Stack/ Backend) certification\r <br></br>",
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^2.2.1",
+    "@reduxjs/toolkit": "^2.8.2",
     "@stripe/stripe-js": "^3.4.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
